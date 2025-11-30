@@ -5,7 +5,7 @@
 */
 
 /* CSS Style resets */
-header, nav, body,main, footer, img, ul {
+header, nav, body, main, section, footer, img, ul, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,6 +14,7 @@ header, nav, body,main, footer, img, ul {
 /* Style rule for images */
 img {
 	max-width: 100%;
+    max-height: 75vh;
     border-style: solid;
     border-width: 4px 4px 30px 4px;
     border-color:#f6eee4;
@@ -58,6 +59,7 @@ header {
 }
 
 header h1 {
+    margin: 20px 0px;
     color: #5de6af;
     font-family: "Jetbrains Mono", monospace;
     font-size: 1.4em;
@@ -108,8 +110,8 @@ main {
     background: transparent;
 }
 
-main h1, h2, h3 {
-    margin: 20px 0px 0px 0px;
+main h1, main h2, main h3 {
+    margin: 70px 0px 20px 0px;
     display: block;
     font-family: "Spectral", serif;
     color: #f7e8d7;
@@ -120,7 +122,7 @@ main h1 {
 }
 
 main p {
-    background-color: #0a1407;
+    background-color: #121c24;
     border-style: solid;
     border-width: 5px 10px;
     border-color: #429673;
@@ -132,6 +134,15 @@ main p {
     color: #f6eee4;
     border-radius: 20px;
     max-height: fit-content;
+}
+
+main p.small-note {
+    border-style: solid;
+    border-width: 5px 10px;
+    border-color: #507264;
+    border-radius: 5px;
+    margin: 10px 50px;
+    font-family: "Courier", monospace;
 }
 
 main p a {
@@ -150,21 +161,23 @@ main p a:active {
 }
 
 main ul {
-    background-color: #0a1407;
+    background-color: #121c24;
     border-style: solid;
-    border-width: 5px 20px;
-    border-color: #429673;
-    margin-left: 20px;
-    padding: 5px;
+    border-width: 5px 10px;
+    border-color: #507264;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
     font-family: "Jetbrains Mono", monospace;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.7em;
     color: #f6eee4;
-    border-radius: 10px;
+    max-width: fit-content;
 }
 
 main li {
     display: block;
+    padding: 10px;
 }
 
 p.steve {
@@ -198,12 +211,43 @@ p.steve {
     border-radius: 50px;
 }
 
+a.button {
+    font-size: 1em;
+    display: block;
+    color: #2a0611;
+    text-decoration: none;
+    background-color: #5de6af;
+    margin: 3px;
+    border-radius: 50px;
+}
+
+a.button:active {
+    color: #f6eee4;
+    background-color: transparent;
+}
+
 .button a:active {
     color: #f6eee4;
     background-color: transparent;
 }
 
 /* Style rules for captioned image blocks */
+
+figure {
+    margin-bottom: 10px;
+}
+
+figure img {
+    width: 85vw;
+    max-height: 75vh;
+    margin: auto;
+}
+
+.side-captioned{
+    display: flex;
+    flex-direction: row;
+}
+
 .img-captioned {
     margin-bottom: 10px;
 }
@@ -222,6 +266,16 @@ p.steve {
     border-radius: 10px;
 }
 
+table {
+    border-style: solid;
+    border-width: 5px 10px;
+    margin: 10px;
+    padding: 10px;
+    font-family: "Jetbrains Mono", monospace;
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
 /* Style rule for the socials list */
 #socials {
     text-align: center;
@@ -233,6 +287,8 @@ p.steve {
     font-size: 1.2em;
     font-family: "Jetbrains Mono", monospace;
     font-weight: bold;
+    text-align: center;
+    max-width: fit-content;
     width: 13em;
     margin: auto;
 }
@@ -241,16 +297,15 @@ p.steve {
     border: none;
     background: none;
     list-style-type: none;
-    text-align: center;
 }
 
 .link-list li a {
     display: block;
     color: #2a0611;
-    padding: 0.5em 2em;
+    padding: 0.2em 1.5em;
+    font-size: 1.5rem;
     text-decoration: none;
     background-color: #5de6af;
-    margin: 3px;
     border-radius: 50px;
 }
 
@@ -259,8 +314,8 @@ p.steve {
     background-color: transparent;
 }
 
-/* Style rules for comissions content */
-#commissions-request img {
+/* Style rules for small figure */
+.side-fig img {
     width: 85vw;
 }
 
@@ -334,6 +389,20 @@ footer a {
         max-width: 50vw;
     }
 
+    figure {
+        display: flex;
+    }
+
+    figure img {
+        justify-self: center;
+        min-width: 300px;
+        margin: 10px;
+    }
+
+    figcaption {
+        margin: auto;
+    }
+
     .img-captioned {
         display: flex;
     }
@@ -362,11 +431,11 @@ footer a {
     }
 
     /* Tablet Viewport: Style rules for comissions content */
-    #commissions-request {
+    .small-fig {
         display: flex;
     }
 
-    #commissions-request img {
+    .small-fig img {
         width: 25vw;
     }
 
@@ -420,8 +489,24 @@ footer a {
         gap: 20px;
     }
 
+    figure {
+        flex-direction: column;
+    }
+
+    figure img {
+        width: 70%;
+        height: 700%;
+        margin: 10px;
+    }
+
     .img-captioned {
         flex-direction: column;
+    }
+
+    .img-captioned img {
+        width: 70%;
+        height: 700%;
+        margin: 10px;
     }
 
     #catalogue {
@@ -442,12 +527,6 @@ footer a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .img-captioned img {
-        width: 70%;
-        height: 700%;
-        margin: 10px;
     }
 
     .catalogue-captioned {

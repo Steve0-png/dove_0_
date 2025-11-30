@@ -169,7 +169,7 @@ main ul {
     margin: 10px;
     padding: 10px;
     font-family: "Jetbrains Mono", monospace;
-    font-size: 1.1em;
+    font-size: 1.5em;
     line-height: 1.7em;
     color: #f6eee4;
     max-width: fit-content;
@@ -201,7 +201,7 @@ p.steve {
 }
 
 .button a {
-    display: block;
+    display: flex;
     min-width: 9.6em;
     color: #2a0611;
     padding: 0.5em 2em;
@@ -269,11 +269,20 @@ figure img {
 table {
     border-style: solid;
     border-width: 5px 10px;
-    margin: 10px;
-    padding: 10px;
+    margin: auto;
     font-family: "Jetbrains Mono", monospace;
     font-size: 1.1em;
     line-height: 1.7em;
+    max-width: fit-content;
+}
+
+/* Style rule for comission sections */
+#comissions h1, #comissions h2, #comissions h3 {
+    text-align: center;
+}
+
+#comissions ul {
+    margin: auto;
 }
 
 /* Style rule for the socials list */
@@ -300,13 +309,18 @@ table {
 }
 
 .link-list li a {
-    display: block;
+    display: flex;
     color: #2a0611;
     padding: 0.2em 1.5em;
     font-size: 1.5rem;
     text-decoration: none;
     background-color: #5de6af;
     border-radius: 50px;
+}
+
+.link-list li a img {
+    border: none;
+    max-width: 50px;
 }
 
 .link-list li a:active {

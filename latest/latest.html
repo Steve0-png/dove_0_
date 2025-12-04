@@ -33,16 +33,52 @@
 
     <article id="container">
 
-        <header>
-            <h1>&lt; <a href="/index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+        <header class="mobile navbar navbar-dark sticky-top d-flex justify-content-evenly">
+            <h1>&lt; <a href="../index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 p-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../latest/latest.html">Latest</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../fandoms.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fandoms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark mx-4">
+                                <li><a class="dropdown-item" href="#">DTIYS Entries</a></li>
+                                <li><a class="dropdown-item" href="#">Risk of Rain</a></li>
+                                <li><a class="dropdown-item" href="../hollow_knight/hollow_knight.html">Hollow Knight</a></li>
+                                <li><a class="dropdown-item" href="#">Portraits</a></li>
+                                <li><a class="dropdown-item" href="#">OCs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../requests.html">Requests</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
-        <nav>
+        <header class="tab-desk z-3">
+            <h1>&lt; <a href="../index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+        </header>
+
+        <nav class="tab-desk">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/latest/latest.html">Latest</a></li>
-                <li><a href="/fandoms.html">Fandoms</a></li>
-                <li><a href="/requests.html">Requests</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../latest/latest.html">Latest</a></li>
+                <li><a href="../fandoms.html">Fandoms</a></li>
+                <li><a href="../requests.html">Requests</a></li>
             </ul>
         </nav>
 

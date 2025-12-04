@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="manifest" href="./images/site.webmanifest">
@@ -33,13 +33,48 @@
 
     <div id="container">
 
-        <header>
+        <header class="mobile navbar navbar-dark sticky-top d-flex justify-content-evenly">
+            <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 p-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./latest/latest.html">Latest</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./fandoms.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fandoms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark mx-4">
+                                <li><a class="dropdown-item" href="#">DTIYS Entries</a></li>
+                                <li><a class="dropdown-item" href="#">Risk of Rain</a></li>
+                                <li><a class="dropdown-item" href="./hollow_knight/hollow_knight.html">Hollow Knight</a></li>
+                                <li><a class="dropdown-item" href="#">Portraits</a></li>
+                                <li><a class="dropdown-item" href="#">OCs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./requests.html">Requests</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <header class="tab-desk z-3">
             <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
         </header>
 
-        <nav>
+        <nav class="tab-desk">
             <ul>
-                <li><a href="template.html">Template</a></li>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./latest/latest.html">Latest</a></li>
                 <li><a href="./fandoms.html">Fandoms</a></li>

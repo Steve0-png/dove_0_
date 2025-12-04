@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+
     <title>Fandom Catalogue | #DOVE/0!</title>
     <meta name="description" content="All the entries drawn for the Silktober 2025 challenge">
 
@@ -27,11 +33,47 @@
 
     <div id="container">
 
-        <header>
+        <header class="mobile navbar navbar-dark sticky-top d-flex justify-content-evenly">
+            <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 p-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./latest/latest.html">Latest</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./fandoms.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fandoms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark mx-4">
+                                <li><a class="dropdown-item" href="#">DTIYS Entries</a></li>
+                                <li><a class="dropdown-item" href="#">Risk of Rain</a></li>
+                                <li><a class="dropdown-item" href="./hollow_knight/hollow_knight.html">Hollow Knight</a></li>
+                                <li><a class="dropdown-item" href="#">Portraits</a></li>
+                                <li><a class="dropdown-item" href="#">OCs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./requests.html">Requests</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <header class="tab-desk z-3">
             <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
         </header>
 
-        <nav>
+        <nav class="tab-desk">
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./latest/latest.html">Latest</a></li>
@@ -55,7 +97,20 @@
 
                         <figcaption class="tab-desk">
                             <p>Entries made for various Draw This in Your Style challenges!<br>Drawings primarily consisting of fan art prompted by an existing piece done by someone else which then invites me to create my own interpretation of said drawing in my style!</p>
-                            <h1 class="button"><a href="">DTIYS Entries</a></h1>
+                            <h1 class="button"><a href="#">DTIYS Entries</a></h1>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="entry">
+                    <h1 class="button mobile"><a href="hollow_knight/hollow_knight.html">Risk of Rain</a></h1>
+
+                    <figure class="catalogue-captioned">
+                        <img class="round thumb" src="images/risk_of_rain/risk_of_rain_rexvirtualsketch.png" alt="sketch of a spider robot walking">
+
+                        <figcaption class="tab-desk">
+                            <p>Art from the hit indie game Risk of Rain 2! This stuff is mostly going to be drawings of the playable characters.</p>
+                            <h1 class="button"><a href="#">Risk of Rain</a></h1>
                         </figcaption>
                     </figure>
                 </section>
@@ -64,7 +119,7 @@
                     <h1 class="button mobile"><a href="hollow_knight/hollow_knight.html">Hollow Knight</a></h1>
 
                     <figure class="catalogue-captioned">
-                        <img class="round thumb" src="images/hollow-knight/hollow-kight-ico.png" alt="hollow knight character">
+                        <img class="round thumb" src="images/hollow-knight/hollow-kight-ico.png" alt="hollow knight shadow creature">
 
                         <figcaption class="tab-desk">
                             <p>Fanart based on the indie game Hollow Knight, and it's sequel, Silksong!<br>Most prominently includes fanart of the main character from Silksong, Hornet, as well as other characters and environments from the game. Some of my best background work is showcased here.</p>
@@ -81,7 +136,7 @@
 
                         <figcaption class="tab-desk">
                             <p>Art of real people, or also fake ones who knows.<br> This will only be posts that have the consent of those who are depicted, but it may also include head and bust studies of fictional people.</p>
-                            <h1 class="button"><a href="">Portraits</a></h1>
+                            <h1 class="button"><a href="#">Portraits</a></h1>
                         </figcaption>
                     </figure>
                 </section>
@@ -94,7 +149,7 @@
 
                         <figcaption class="tab-desk">
                             <p>Dove's original characters, or other's brought to life by pen, pencil, and paper!<br>Some of these characters are part of ongoing stories, while others are standalone creations that I might never draw again. This collection will also dedicate a big portion to fan art of other people's original characters.</p>
-                            <h1 class="button"><a href="">OC Art</a></h1>
+                            <h1 class="button"><a href="#">OC Art</a></h1>
                         </figcaption>
                     </figure>
                 </section>

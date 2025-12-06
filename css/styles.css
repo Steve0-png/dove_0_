@@ -310,7 +310,7 @@ a.button:active {
     border-width: 5px 10px;
     border-radius: 5px;
     margin: 20px auto;
-    width: 550px;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,7 +319,8 @@ a.button:active {
 audio {
     width: 550px;
     background-color: #b0c4ac;
-    border: solid #b0c4ac 15px;
+    border: solid #b0c4ac;
+    border-width: 18px 5px;
 }
 
 /* Style rules for captioned image blocks */
@@ -637,6 +638,10 @@ footer {
 
     #music-samples .row {
         flex-direction: row;
+    }
+
+    .audio-container {
+        width: 550px;
     }
 
     .catalogue-captioned {

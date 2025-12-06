@@ -11,7 +11,24 @@ header, nav, body, main, section, footer, img, ul, figure, figcaption {
     border: 0;
 }
 
-/* Style rule for images */
+/* Style rule for skip button */
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
+/* Style rules for images */
 img {
 	max-width: 100%;
     max-height: 75vh;
@@ -258,6 +275,51 @@ a.button:active {
 .button a:active {
     color: #f6eee4;
     background-color: transparent;
+}
+
+/* Style rules for showing music */
+
+.view-sample {
+    cursor: pointer;
+}
+
+#music-samples {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+}
+
+#music-samples .row {
+    margin: auto;
+    flex-direction: column;
+}
+
+#music-samples .row a {
+    padding: 5px;
+    width: 300px;
+}
+
+#music-sample {
+    display: none;
+}
+
+.audio-container {
+    border: solid #507264;
+    border-width: 5px 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio {
+    width: 550px;
+    background-color: #b0c4ac;
+    border: solid #b0c4ac 15px;
 }
 
 /* Style rules for captioned image blocks */
@@ -571,6 +633,10 @@ footer {
 
     .small-fig img {
         width: 35vw;
+    }
+
+    #music-samples .row {
+        flex-direction: row;
     }
 
     .catalogue-captioned {

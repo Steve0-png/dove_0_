@@ -24,7 +24,7 @@
     <meta name="description" content="A collection of digital paintings and traditional drawings done by Dove in one place! I draw a variety of subjects, including fan art, original characters, and more!">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -41,7 +41,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end text-bg-dark" role="navigation" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -167,7 +167,7 @@
             </div>
 
             <h1>Current Featured Pieces</h1>
-            <p class="steve">Steve-0 Here: These are a few of my favorite pieces that Dove has done recently. At the time of this writing, it's the middle of October 2025, and Dove is doing a daily challenge of drawing something Silksong related for the duration of October! I hope you enjoy them as much as I do!</p>
+            <p class="steve">Steve-0 Here: These are a few of my favorite pieces that Dove has done recently. At the time of this writing, she's still doing quite a bit of Hollow Knight fanart, but she does have a more diverse portfolio. I hope you enjoy them as much as I do!</p>
 
             <div class="grid">
                 <section class="entry">
@@ -237,16 +237,16 @@
 
             </div>
 
-            <section id="music-samples">
+            <div id="music-samples">
                 <p class="small-note text-center">I also compose music if you wanna check out a few snippets!</p>
 
                 <div class="row">
-                    <a class="button col"><span class="view-sample" onclick="infomo()">It's No Fault of My Own</span></a>
-                    <a class="button col"><span class="view-sample" onclick="desertStarfall()">Desert Starfall</span></a>
+                    <a class="button col view-sample" onclick="infomo()">It's No Fault of My Own</a>
+                    <a class="button col view-sample" onclick="desertStarfall()">Desert Starfall</a>
                 </div>
                 <div class="row">
-                    <a class="button col"><span class="view-sample" onclick="crashlogPiano()">crashlog_piano</span></a>
-                    <a class="button col"><span class="view-sample" onclick="objectImpermanence()">Object Impermanence (Piano)</span></a>
+                    <a class="button col view-sample" onclick="crashlogPiano()">crashlog_piano</a>
+                    <a class="button col view-sample" onclick="objectImpermanence()">Object Impermanence (Piano)</a>
                 </div>
 
                 <div class="audio-container">
@@ -256,7 +256,7 @@
                     </audio>
                 </div>
 
-            </section>
+            </div>
 
         </main>
 

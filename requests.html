@@ -21,10 +21,10 @@
     <link rel="manifest" href="./images/site.webmanifest">
 
     <title>Requests and Commissions | #DOVE/0!</title>
-    <meta name="description" content="All the entries drawn for the Silktober 2025 challenge">
+    <meta name="description" content="Information for commissioning Dove and what social media to contact me on.">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -41,7 +41,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end text-bg-dark" role="navigation" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -97,20 +97,24 @@
 
                     <h2>Base Pricing and Types:</h2>
 
-                    <ul class="mobile" style="font-size: 1em;">
-                        <li><strong><u>Sketch/Lineart:</u></strong><br>$15 (+10 per extra)</li>
-                        <li><strong><u>Rendered Simple Character/Chibi:</u></strong><br> $30 (+$20 per extra)</li>
-                        <li><strong><u>Rendered Headshot/Icons:</u></strong><br> $30 (+$20 per extra)</li>
-                        <li><strong><u>Rendered Half-Body/Simpler Creature:</u></strong><br> $50 (+$40 per extra)</li>
-                        <li><strong><u>Rendered Full Character/Complex Creature:</u></strong><br> $70 (+$60 per extra)</li>
-                        <li><strong><u>Scene:</u></strong><br> $60+</li>
-                        <li><strong><u>Portrait (Realistic):</u></strong><br> $150</li>
-                        <h3 style="text-decoration: underline;">- Background -<br>Price will be added onto<br>overall total</h3>
-                        <li><strong><u>Detailed:</u></strong> $20+</li>
-                        <li><strong><u>Simple:</u></strong> $10+</li>
-                        <li><strong><u>"Default":</u></strong> Free</li>
-                        <p>“Default” includes an abstract floor and/or background, lighting appropriate.</p>
-                    </ul>
+                    <div class="box-list mobile">
+                        <ul>
+                            <li><strong><u>Sketch/Lineart:</u></strong><br>$15 (+10 per extra)</li>
+                            <li><strong><u>Rendered Simple Character/Chibi:</u></strong><br> $30 (+$20 per extra)</li>
+                            <li><strong><u>Rendered Headshot/Icons:</u></strong><br> $30 (+$20 per extra)</li>
+                            <li><strong><u>Rendered Half-Body/Simpler Creature:</u></strong><br> $50 (+$40 per extra)</li>
+                            <li><strong><u>Rendered Full Character/Complex Creature:</u></strong><br> $70 (+$60 per extra)</li>
+                            <li><strong><u>Scene:</u></strong><br> $60+</li>
+                            <li><strong><u>Portrait (Realistic):</u></strong><br> $150</li>
+                        </ul>
+                        <h3>- Background -<br>Price will be added onto<br>overall total</h3>
+                        <ul>
+                            <li><strong><u>Detailed:</u></strong> $20+</li>
+                            <li><strong><u>Simple:</u></strong> $10+</li>
+                            <li><strong><u>Default*:</u></strong> Free</li>
+                        </ul>
+                        <p class="small-note">*Default includes an abstract floor and/or background, lighting appropriate.</p>
+                    </div>
 
                     <table class="table table-dark table-striped table-hover tab-desk">
                         <thead>
@@ -181,10 +185,6 @@
                         </tbody>
                     </table>
 
-                </section>
-
-                <section>
-                    
                     <p>If what you want falls outside of these, or if you have any questions, please ask! Correspondence is important, and I promise, I'm autistic, not scary.<br><br>Ask for an example of realistic portraits! I will not publically show some examples that I have as they are mostly of real people.</p>
                     <figure class="side-captioned">
                         <img class="round thumb tab-desk" src="./images/div.png" alt="sketch of an alien creature">
@@ -196,7 +196,7 @@
                 </section>
 
                 <section>
-                    <h1>&LeftAngleBracket;&#9830;-- Set of Rules and Regulations --&#9830;&RightAngleBracket;<br>(What Can I Do?)</h1>
+                    <h1 headingoffset="1">&LeftAngleBracket;&#9830;-- Set of Rules and Regulations --&#9830;&RightAngleBracket;<br>(What Can I Do?)</h1>
                     <p class="text-center">The Terms and Conditions, but cooler</p>
 
                     
@@ -217,7 +217,7 @@
                         <li>- Amount of extraneous objects</li>
                     </ul>
 
-                    <h1 style="text-decoration: underline;">NSFW...</h1>
+                    <h1  headingoffset="1" style="text-decoration: underline;">NSFW...</h1>
                     <table class="table table-dark table-striped table-bordered table-hover text-center">
                         <thead>
                             <tr>
@@ -227,20 +227,20 @@
                         </thead>
                         <tbody class="table-group-divider table-dark">
                             <tr>
-                                <td scope="col">Genetalia</td>
-                                <td scope="col">Boobs</td>
+                                <td>Genetalia</td>
+                                <td>Boobs</td>
                             </tr>
                             <tr>
-                                <td scope="col">Gore</td>
-                                <td scope="col">Tasteful Nakedness</td> 
+                                <td>Gore</td>
+                                <td>Tasteful Nakedness</td> 
                             </tr>
                             <tr>
-                                <td scope="col">Attire associated with BDSM</td>
-                                <td scope="col">Revealing Attire</td> 
+                                <td>Attire associated with BDSM</td>
+                                <td>Revealing Attire</td> 
                             </tr>
                             <tr>
-                                <td scope="col">Drug use</td>
-                                <td scope="col">Presence of alcohol or cigarettes</td> 
+                                <td>Drug use</td>
+                                <td>Presence of alcohol or cigarettes</td> 
                             </tr>
                         </tbody>
                     </table>
@@ -257,9 +257,9 @@
                 </section>
 
                 <section>
-                    <h1>&LeftAngleBracket;&#9827;-- Terms and Conditions --&#9827;&RightAngleBracket;</h1>
+                    <h1 headingoffset="1">&LeftAngleBracket;&#9827;-- Terms and Conditions --&#9827;&RightAngleBracket;</h1>
                     <h3 class="text-center" style="text-decoration: underline;">With the final product...</h3>
-                    <table class="table table-dark table-striped table-bordered table-hover text-center">
+                    <table class="tab-desk table table-dark table-striped table-bordered table-hover text-center">
                         <thead>
                             <tr>
                                 <th scope="col">...you may:</th>
@@ -268,31 +268,49 @@
                         </thead>
                         <tbody class="table-group-divider table-dark">
                             <tr>
-                                <td scope="col">Repost it with credit</td>
-                                <td scope="col">Alter it</td>
+                                <td>Repost it with credit</td>
+                                <td>Alter it</td>
                             </tr>
                             <tr>
-                                <td scope="col">Use it in personal contexts<br>(e.g. profile pictures,<br>social media banners,<br>printed to frame on your wall)</td>
-                                <td scope="col">Use it to feed AI learning</td> 
+                                <td>Use it in personal contexts<br>(e.g. profile pictures,<br>social media banners,<br>printed to frame on your wall)</td>
+                                <td>Use it to feed AI learning</td> 
                             </tr>
                             <tr>
-                                <td scope="col">Tattoo it onto yourself<br>(though, I cannot fathom why you would)</td>
-                                <td scope="col">Use it commercially</td> 
+                                <td>Tattoo it onto yourself<br>(though, I cannot fathom why you would)</td>
+                                <td>Use it commercially</td> 
                             </tr>
                             <tr>
-                                <td scope="col"></td>
-                                <td scope="col">Use it in any context regarding NFTs</td> 
+                                <td></td>
+                                <td>Use it in any context regarding NFTs</td> 
                             </tr>
                             <tr>
-                                <td scope="col"></td>
-                                <td scope="col">Resell it in any way</td> 
+                                <td></td>
+                                <td>Resell it in any way</td> 
                             </tr>
                             <tr>
-                                <td scope="col"></td>
-                                <td scope="col">Use it to fuel hate or harm in any way</td> 
+                                <td></td>
+                                <td>Use it to fuel hate or harm in any way</td> 
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="mobile box-list">
+                        <h3>... you may:</h3>
+                        <ul>
+                            <li>- Repost it with credit</li>
+                            <li>- Use it in personal contexts<br>(e.g. profile pictures,<br>social media banners,<br>printed to frame on your wall)</li>
+                            <li>- Tattoo it onto yourself<br>(though, I cannot fathom why you would)</li>
+                        </ul>
+                        <h3>... you may NOT:</h3>
+                        <ul>
+                            <li>- Alter it</li>
+                            <li>- Use it to feet AI learning</li>
+                            <li>- Use it commecially</li>
+                            <li>- Use it in any context regarding NFTs</li>
+                            <li>- Resell it in any way</li>
+                            <li>- Use it to fuel hate or harm in any way</li>
+                        </ul>
+                    </div>
 
                     <h3>If applicable I will:</h3>
                     <ul>
@@ -306,13 +324,13 @@
                 </section>
 
                 <section>
-                    <h1 class="tab-desk" style="font-size: 3em;">&LeftAngleBracket;&#9829;-- Payment and Product --&#9829;&RightAngleBracket;</h1>
-                    <h1 class="mobile" style="font-size: 3em;">Payment<br>&LeftAngleBracket;&#9829;-- and --&#9829;&RightAngleBracket;<br>Product</h1>
+                    <h1 headingoffset="1" class="tab-desk" style="font-size: 3em;">&LeftAngleBracket;&#9829;-- Payment and Product --&#9829;&RightAngleBracket;</h1>
+                    <h1 headingoffset="1" class="mobile" style="font-size: 3em;">Payment<br>&LeftAngleBracket;&#9829;-- and --&#9829;&RightAngleBracket;<br>Product</h1>
                     <p>If I'm not being commissioned via Kofi, I ask for half the price initially for a down payment, and the rest will be expected by the time the final product is finished.<br><br><strong>NO REFUNDS</strong> will be provided after I start the work, no matter the method in which I am being commissioned. </p>
                 
                     <h2 class="text-center">I am able to recieve payment on:</h2>
                     <ul class="m-auto text-center">
-                        <li><a class="button" href="https://ko-fi.com/dove_0">Kofi</a>(preferred)</li>
+                        <li><a class="button" href="https://ko-fi.com/dove_0" target="_blank">Kofi</a>(preferred)</li>
                         <li>- Cashapp -</li>
                         <li>- Paypal -</li>
                     </ul>
@@ -337,7 +355,7 @@
             
                 <div class="link-list">
                     <ul>
-                        <li><a href="https://ko-fi.com/dove_0" target="_blank">Ko-fi<img src="./images/icons/kofi_symbol.svg" alt="ko-fi logo"></a></a></li>
+                        <li><a href="https://ko-fi.com/dove_0" target="_blank">Ko-fi<img src="./images/icons/kofi_symbol.svg" alt="ko-fi logo"></a></li>
                     </ul>
                 </div>
                 <p class="tab-desk">I do art, and I do it well. You can see it for yourself and leave a tip if you're so inclined (if you can spare it!)</p>

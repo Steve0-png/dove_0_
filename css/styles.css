@@ -182,6 +182,13 @@ main p {
     max-height: fit-content;
 }
 
+p.steve {
+    border-color: #7a42a8;
+    font-family: "Jetbrains Mono", monospace;
+    font-size: 1em;
+    font-weight: 200;
+}
+
 main p.small-note {
     border-style: solid;
     border-width: 5px 10px;
@@ -206,7 +213,7 @@ main p a:active {
     background-color: #000;
 }
 
-main ul {
+main ul, .box-list {
     background-color: #121c24;
     border-style: solid;
     border-width: 5px 10px;
@@ -215,10 +222,13 @@ main ul {
     margin: 10px;
     padding: 10px;
     font-family: "Jetbrains Mono", monospace;
-    font-size: 1.5em;
-    line-height: 1.7em;
     color: #f6eee4;
     max-width: fit-content;
+}
+
+main ul {
+    font-size: 1.5em;
+    line-height: 1.7em;
 }
 
 main li {
@@ -226,11 +236,23 @@ main li {
     padding: 10px;
 }
 
-p.steve {
-    border-color: #7a42a8;
-    font-family: "Jetbrains Mono", monospace;
+.box-list h3 {
+    text-decoration: underline;
+}
+
+.box-list ul {
+    margin: 0;
     font-size: 1em;
+    border: none;
+}
+
+.box-list p.small-note {
+    border: solid #f6eee4 1px;
+    background-color: #16454d;
+    font-family: 'Jetbrains Mono', monospace;
+    font-size: 0.9em;
     font-weight: 200;
+    margin: 10px
 }
 
 .hero {
@@ -374,6 +396,10 @@ table {
 
 #comissions ul {
     margin: auto;
+}
+
+#comissions ul li {
+    font-size: 1.1rem;
 }
 
 /* Style rule for the socials list */

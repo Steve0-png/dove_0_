@@ -1,10 +1,3 @@
-<?php
-if($_POST["message"])
-{
-    mail("youremail@domain.com", "New Form Submission",
-    $_POST["message"], "From: ".$_POST["email"]);
-}
-?>
 <!DOCTYPE html>
 <!--
 Name: Stevene Roe
@@ -31,7 +24,7 @@ Due: 10/19/2025
     <meta name="description" content="A form to fill out all the basic information needed to commission Dove for an artpiece">
     
     <!-- Local CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -45,7 +38,7 @@ Due: 10/19/2025
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end text-bg-dark" role="navigation" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -123,13 +116,13 @@ Due: 10/19/2025
                         <div class="row">
                             <div class="input-group mb-3 col">
                                 <label class="input-group-text" for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" placeholder="you@email.com" id="email" name="email" required>
                             </div>
 
                             <div class="input-group mb-3 col">
                                 <label class="input-group-text" for="userTag">Username</label>
                                 <label class="input-group-text" for="userTag">@</label>
-                                <input type="text" placeholder="Username" aria-label="Username" aria-describedby="userTag">
+                                <input type="text" placeholder="Username" id="userTag">
                             </div>
                         </div>
                     </fieldset>
@@ -185,13 +178,13 @@ Due: 10/19/2025
                         <legend>Payment</legend>
                         <div class="input-group mb-3">
                             <label class="input-group" for="guesstimate">How much do you think you're going to spend?</label>
-                            <label class="input-group-text" for="userTag">$</label>
+                            <label class="input-group-text" for="guesstimate">$</label>
                             <input class="mauto" type="text" name="guesstimate" id="guesstimate">
                         </div>
 
                         <div class="input-group mb-3">
-                            <label class="input-group-text" for="socials">Payment Option</label>
-                            <select class="m-0 px-4" id="socials">
+                            <label class="input-group-text" for="paymentops">Payment Option</label>
+                            <select class="m-0 px-4" id="paymentops">
                                 <option value="ko-fi">Ko-Fi (preferred)</option>
                                 <option value="instagram">Cashapp</option>
                                 <option value="discord">Paypal</option>

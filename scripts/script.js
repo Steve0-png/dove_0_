@@ -5,7 +5,6 @@
  */
 
 // Global Variables
-
 var music = document.getElementById("music-sample");
 var musicSource = document.getElementById("mus-src");
 

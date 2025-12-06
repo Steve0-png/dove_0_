@@ -21,10 +21,10 @@
     <link rel="manifest" href="../images/site.webmanifest">
 
     <title>Latest Pieces | #DOVE/0!</title>
-    <meta name="description" content="All of dove's latest art">
+    <meta name="description" content="All of dove's latest art in reverse chronological order">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.min.css">
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -34,14 +34,14 @@
     <!-- Skip to Content Link -->
     <a class="skip" href="#content">Skip to Content</a>
 
-    <article id="container">
+    <div id="container">
 
         <header class="mobile navbar navbar-dark sticky-top d-flex justify-content-evenly">
             <h1>&lt; <a href="../index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end text-bg-dark" role="navigation" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -90,7 +90,7 @@
 
             <h1>&LeftAngleBracket;&spadesuit; Dove's Latest Drawings &spadesuit;&RightAngleBracket;<br>(in reverse chronological order)</h1>
 
-            <article class="grid">
+            <div class="grid">
 
                 <!-- Insert new pieces under this line -->
 
@@ -474,7 +474,7 @@
                     </figure>
                 </section>
 
-            </article>
+            </div>
 
         </main>
 

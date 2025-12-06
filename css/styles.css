@@ -267,8 +267,7 @@ figure {
 }
 
 figure img {
-    width: 85vw;
-    max-height: 75vh;
+    max-height: 80vh;
     margin: auto;
 }
 
@@ -317,6 +316,7 @@ table {
 /* Style rule for the socials list */
 #socials {
     text-align: center;
+    margin-top: 100px;
 }
 
 /* Style rules for listed links */
@@ -332,6 +332,8 @@ table {
 }
 
 .link-list ul {
+    margin: 0;
+    padding: 0;
     border: none;
     background: none;
     list-style-type: none;
@@ -340,9 +342,11 @@ table {
 .link-list li a {
     display: flex;
     color: #2a0611;
-    padding: 0.2em 1.5em;
+    padding: 5px 0 5px 15px;
+    min-width: 200px;
     font-size: 1.5rem;
     text-decoration: none;
+    justify-content: space-between;
     background-color: #5de6af;
     border-radius: 50px;
 }
@@ -362,10 +366,79 @@ table {
     width: 85vw;
 }
 
+/* Style rules for form content */
+form {
+    color:#f6eee4;
+    background-color: #16454d !important;
+    font-family: 'Jetbrains Mono', monospace;
+}
+
+#submit.button {
+    background-color: #16454d;
+    margin: 10px !important;
+}
+
+#submit.button:hover {
+    background-color: #507264;
+}
+
+#submit.button:active {
+    background-color: #121c24;
+}
+
+.form-grid {
+    background-color: #121c24;
+    border: solid;
+    border-width: 5px 10px;
+    border-color:#1c5c4c;
+}
+
+fieldset {
+    margin: 10px !important;
+    padding: 10px !important;
+    border: solid !important;
+    border-width: 2px !important;
+    border-color: #b0c4ac !important;
+}
+
+fieldset p {
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
+    text-decoration: underline !important;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+fieldset legend {
+    margin-top: 10px;
+    font-family: 'Spectral', serif;
+    font-weight: bold;
+}
+
+fieldset label, fieldset select{
+    color: #f6eee4 !important;
+    border-color: #f6eee4;
+    border-radius: 0 !important;
+    background-color: #16454d !important;
+}
+
+#comission-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#comission-content label {
+    padding: 5px;
+    background-color: transparent !important;
+}
+
 /* Style rules for footer content */
 footer {
+    display: flex;
+    justify-content: space-around;
     text-align: center;
-    margin-top: 60px;;
+    margin-top: 60px;
     padding: 10px;
     background-color: #0f010c6c;
     color: #f7e8d7;
@@ -374,9 +447,30 @@ footer {
     clear: left;  
 }
 
-footer a {
-    color: #4645a8;
-    text-decoration: none;
+.credit {
+    margin: auto 0 auto 0;
+}
+
+.credit p {
+    margin: 10px;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.social a {
+    margin: auto 0 auto 0;
+    aspect-ratio: 1 / 1;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.social a img {
+    border: none;
+    aspect-ratio: 1 / 1;
 }
 
 /* Media Query for Tablet Viewport*/
@@ -444,14 +538,13 @@ footer a {
         max-width: 50vw;
     }
 
-    figure {
-        display: flex;
+    figure.index-captioned {
+        flex-direction: column;
     }
 
     figure img {
-        justify-self: center;
+        margin: 10px auto;
         min-width: 300px;
-        margin: 10px;
     }
 
     figcaption {
@@ -490,7 +583,7 @@ footer a {
     }
 
     .button {
-        min-width: text;
+        min-width: fit-content;
     }
 
     .p-col {
@@ -500,7 +593,11 @@ footer a {
     /* Tablet Viewport: Style rules for socials content*/
     #socials {
         max-width: 500px;
-        margin: auto;
+        margin: 100px auto auto auto;
+    }
+
+    .link-list ul {
+        margin-top: 40px;
     }
 }
 
@@ -552,7 +649,7 @@ footer a {
     }
 
     figure img {
-        width: 80%;
+        max-width: 95%;
         height: 700%;
         margin: 10px;
     }

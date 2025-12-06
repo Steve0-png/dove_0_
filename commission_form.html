@@ -1,0 +1,231 @@
+<?php
+if($_POST["message"])
+{
+    mail("youremail@domain.com", "New Form Submission",
+    $_POST["message"], "From: ".$_POST["email"]);
+}
+?>
+<!DOCTYPE html>
+<!--
+Name: Stevene Roe
+File: template.html
+Due: 10/19/2025
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    
+    <title>Commission Form | #DOVE/0!</title>
+    <meta name="description" content="A form to fill out all the basic information needed to commission Dove for an artpiece">
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div id="container">
+        
+        <header class="mobile navbar navbar-dark sticky-top d-flex justify-content-evenly">
+            <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 p-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./latest/latest.html">Latest</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./fandoms.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fandoms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark mx-4">
+                                <li><a class="dropdown-item" href="./dtiys/dtiys.html">DTIYS Entries</a></li>
+                                <li><a class="dropdown-item" href="./risk_of_rain/risk_of_rain.html">Risk of Rain</a></li>
+                                <li><a class="dropdown-item" href="./hollow_knight/hollow_knight.html">Hollow Knight</a></li>
+                                <li><a class="dropdown-item" href="./portraits/portraits.html">Portraits</a></li>
+                                <li><a class="dropdown-item" href="./ocs/ocs.html">OCs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./requests.html">Requests</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <header class="tab-desk z-3">
+            <h1>&lt; <a href="./index.html">#DOVE/0! Art Repo!</a> &gt;</h1>
+        </header>
+        
+        <nav class="tab-desk">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./latest/latest.html">Latest</a></li>
+                <li><a href="./fandoms.html">Fandoms</a></li>
+                <li><a href="./requests.html">Requests</a></li>
+            </ul>
+        </nav>
+        
+        <!-- main content -->
+        <main>
+            
+            <h1>Submitting Commission Information</h1>
+            
+            <div id="form">
+                <p>Fill out the short form with some information about yourself and about the request you wish so I can better help you fulfill your request.</p>
+                
+                <!-- Start Form -->
+                <form class="form-grid" id="commission-form" method="POST" action="mailto:dove_0_@outlook.com">
+                    
+                    <fieldset id="client-info">
+                        <legend>Client Information</legend>
+
+                        <div class="row">                            
+                            <div class="input-group mb-3 col">
+                                <label class="input-group-text" for="fName">Name or Alias:</label>
+                                <input type="text" id="fName" name="fName" required>
+                            </div>
+
+                            <div class="input-group mb-3 col">
+                                <label class="input-group-text" for="socials">Social Contact</label>
+                                <select class="m-0 px-4" id="socials">
+                                    <option value="instagram">Instagram</option>
+                                    <option value="discord">Discord</option>
+                                    <option value="ko-fi">Ko-Fi</option>
+                                    <option value="email">None/Email Only</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="input-group mb-3 col">
+                                <label class="input-group-text" for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="input-group mb-3 col">
+                                <label class="input-group-text" for="userTag">Username</label>
+                                <label class="input-group-text" for="userTag">@</label>
+                                <input type="text" placeholder="Username" aria-label="Username" aria-describedby="userTag">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="comission-content">
+                        <legend>I am requesting an art piece consisting of (check all that apply):</legend>
+                        
+                        <label for="skchLine">
+                            <input type="checkbox" name="interest" id="skchLine" value="Sketch/Lineart" checked>Sketch/Lineart
+                        </label>
+                        <label for="rndSimple">
+                            <input type="checkbox" name="interest" id="rndSimple" value="Rendered Simple Character/Chibi">Rendered Simple Character/Chibi
+                        </label>
+                        <label for="rndHead">
+                            <input type="checkbox" name="interest" id="rndHead" value="Rendered Headshot/Icons">Rendered Headshot/Icons
+                        </label>
+                        <label for="rndHalfBod">
+                            <input type="checkbox" name="interest" id="rndHalfBod" value="Rendered Half-Body/Simple Creature">Rendered Half-Body/Simpler Creature
+                        </label>
+                        <label for="rndFull">
+                            <input type="checkbox" name="interest" id="rndFull" value="Rendered Full Character/Complex Creature">Rendered Simple Character/Chibi
+                        </label>
+                        <label for="scene">
+                            <input type="checkbox" name="interest" id="scene" value="Scene">Scene
+                        </label>
+                        <label for="portrait">
+                            <input type="checkbox" name="interest" id="portrait" value="Portrait (Realistic)">Portrait (Realistic)
+                        </label>
+
+                        <p>Background</p>
+                        <label for="default">
+                            <input type="radio" name="background" id="default" value="Default" checked>Default
+                        </label>
+                        <label for="simple">
+                            <input type="radio" name="background" id="simple" value="Simple">Simple
+                        </label>
+                        <label for="detailed">
+                            <input type="radio" name="background" id="detailed" value="Detailed">Detailed
+                        </label>
+
+                        <p>Short Description</p>
+                        <label for="description">Describe the art piece as best as you can:</label>
+                        <textarea id="description" name="description" rows="4" cols="35"></textarea>
+
+                        <p>Wanna let me go wild with the colors?</p>
+                        <label for="wild">
+                            <input type="checkbox" name="interest" id="wild" value="Wild Card">Wild Card!
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Payment</legend>
+                        <div class="input-group mb-3">
+                            <label class="input-group" for="guesstimate">How much do you think you're going to spend?</label>
+                            <label class="input-group-text" for="userTag">$</label>
+                            <input class="mauto" type="text" name="guesstimate" id="guesstimate">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="socials">Payment Option</label>
+                            <select class="m-0 px-4" id="socials">
+                                <option value="ko-fi">Ko-Fi (preferred)</option>
+                                <option value="instagram">Cashapp</option>
+                                <option value="discord">Paypal</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <input type="submit" id="submit" value="Submit" class="button">
+                    
+                </form>
+            </div>
+            
+        </main>
+        
+        <!-- footer content -->
+        <footer>
+            <div class="credit">
+                <p> Website built by: Steve-0.png</p>
+                <p> Hosted on GitHub Pages</p>
+            </div>
+
+            <div class="social">
+                <a class="button" href="https://www.instagram.com/dove_0_" target="_blank"><img src="./images/icons/instagram_glyph_black.svg" alt="black instagram logo"></a>
+                <a class="button" href="https://ko-fi.com/dove_0" target="_blank"><img src="./images/icons/kofi_symbol.svg" alt="ko-fi logo"></a>
+            </div>
+        </footer>
+        
+    </div>
+
+    <!-- Local JS -->
+    <script src="scripts/script.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>
